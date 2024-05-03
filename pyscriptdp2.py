@@ -25,6 +25,7 @@ for filename in os.listdir(directory):
 				collection.insert_many(file_data)
 			except Exception as e:
 				print(e, "when importing into Mongo")
+				continue
 		else:
 			try:
 				collection.insert_one(file_data)
