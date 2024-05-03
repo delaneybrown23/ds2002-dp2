@@ -20,6 +20,7 @@ for filename in os.listdir(directory):
 			file_data = json.load(f)
 		except Exception as e:
 			print(e, "error when loading", f)
+			continue
 		if isinstance(file_data, list):
 			try:
 				collection.insert_many(file_data)
